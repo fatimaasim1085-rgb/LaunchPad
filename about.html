@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — LaunchPad</title>
+<meta name="description" content="About LaunchPad — the team, the problem, and the vision behind Pakistan's first beginner-focused freelancing platform.">
+<link rel="stylesheet" href="style.css">
+<style>
+  .team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .team-card { background:#fff; border:1px solid var(--mist); border-radius:14px; padding:28px 22px; text-align:center; transition:transform .2s; }
+  .team-card:hover { transform:translateY(-4px); }
+  .team-avatar { width:56px; height:56px; border-radius:50%; background:var(--navy); color:#fff; font-family:'Syne',sans-serif; font-weight:800; font-size:1.1rem; display:flex; align-items:center; justify-content:center; margin:0 auto 14px; }
+  .team-name { font-family:'Syne',sans-serif; font-size:.95rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .team-role { font-size:.8rem; color:var(--smoke); margin-bottom:10px; }
+  .team-dept { display:inline-block; font-size:.7rem; font-family:'Syne',sans-serif; font-weight:600; padding:3px 10px; border-radius:20px; background:rgba(30,41,82,.08); color:var(--navy); }
+  .timeline { display:flex; flex-direction:column; gap:0; }
+  .tl-item { display:grid; grid-template-columns:100px 1fr; gap:0; align-items:stretch; }
+  .tl-left { display:flex; flex-direction:column; align-items:flex-end; padding-right:24px; }
+  .tl-dot { width:12px; height:12px; border-radius:50%; background:var(--red); flex-shrink:0; margin-top:6px; }
+  .tl-line { width:2px; background:var(--mist); flex:1; margin:4px auto 0; }
+  .tl-item:last-child .tl-line { display:none; }
+  .tl-date { font-family:'Syne',sans-serif; font-size:.72rem; font-weight:700; color:var(--smoke); margin-bottom:4px; text-align:right; }
+  .tl-content { padding-bottom:24px; }
+  .tl-content h4 { font-family:'Syne',sans-serif; font-size:.88rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
+  .tl-content p { font-size:.8rem; color:var(--smoke); line-height:1.5; }
+
+  @media(max-width:700px) { .team-grid { grid-template-columns:1fr 1fr; } }
+  @media(max-width:480px) { .team-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">Launch<span>Pad</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="marketplace.html">Marketplace</a>
+      <a href="blueprint.html">Blueprint</a>
+      <a href="about.html" class="nav-cta active">About</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="marketplace.html">Marketplace</a>
+    <a href="blueprint.html">Blueprint</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-tag">The Vision</div>
+    <h1>About <em>LaunchPad</em></h1>
+    <p>A conceptual venture built by NUST students to solve a real problem in Pakistan's digital economy.</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ABOUT SECTION -->
+  <section>
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">The <em>Problem</em> We're Solving</h2>
+    <div class="about-grid">
+      <div class="about-body">
+        <p>Pakistan has the 3rd largest freelancing workforce in the world — yet 72% of new freelancers quit within their first month. Not because they lack skills, but because the existing platforms were never built for them.</p>
+        <p>Fiverr and Upwork are global marketplaces designed for established professionals. They offer no mentorship, no local payment options, no guidance — and a competitive environment that immediately overwhelms someone who's just starting out.</p>
+        <p>LaunchPad is our answer to that gap. A platform built from scratch for first-time freelancers in Pakistan — with a structured path from zero to earning, a mentor system that pairs you with experienced professionals, and payments via EasyPaisa and JazzCash so there's no PayPal barrier.</p>
+        <p>This is a conceptual venture developed as part of our Entrepreneurship Minor at NUST School of Health Sciences. Every part of the platform — from the tech architecture to the funding strategy — is documented and designed to be buildable.</p>
+      </div>
+      <div class="value-list">
+        <div class="value-item fade-up">
+          <div class="value-dot"></div>
+          <div>
+            <h4>Accessibility First</h4>
+            <p>Local language, local payments, mobile-first. Designed for students in Gujrat, not just professionals in Karachi.</p>
+          </div>
+        </div>
+        <div class="value-item fade-up">
+          <div class="value-dot"></div>
+          <div>
+            <h4>Mentorship as Infrastructure</h4>
+            <p>The mentor system isn't a nice-to-have — it's the core mechanism that separates LaunchPad from every competitor.</p>
+          </div>
+        </div>
+        <div class="value-item fade-up">
+          <div class="value-dot"></div>
+          <div>
+            <h4>Structured Progression</h4>
+            <p>A two-tier system with clear criteria gives freelancers a visible goal to work toward, not an endless grind.</p>
+          </div>
+        </div>
+        <div class="value-item fade-up">
+          <div class="value-dot"></div>
+          <div>
+            <h4>Real-World Impact</h4>
+            <p>Every design decision maps back to SDGs 4, 5, 8, and 10 — employment, gender equity, quality education, reduced inequality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section>
+    <p class="section-label">The Team</p>
+    <h2 class="section-title">Who Built <em>This</em></h2>
+    <div class="team-grid">
+      <div class="team-card fade-up">
+        <div class="team-avatar">F</div>
+        <div class="team-name">Fatima</div>
+        <div class="team-role">Concept Lead & Researcher</div>
+        <span class="team-dept">Health Sciences · NUST</span>
+      </div>
+      <div class="team-card fade-up">
+        <div class="team-avatar">?</div>
+        <div class="team-name">Team Member</div>
+        <div class="team-role">Strategy & Business Model</div>
+        <span class="team-dept">NUST</span>
+      </div>
+      <div class="team-card fade-up">
+        <div class="team-avatar">?</div>
+        <div class="team-name">Team Member</div>
+        <div class="team-role">Technical Architecture</div>
+        <span class="team-dept">NUST</span>
+      </div>
+    </div>
+    <p style="font-size:.82rem; color:var(--smoke); margin-top:14px; text-align:center;">Update the team card names directly in <code>about.html</code></p>
+  </section>
+
+  <!-- ROADMAP -->
+  <section>
+    <p class="section-label">Build Roadmap</p>
+    <h2 class="section-title">From <em>Concept to Launch</em></h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Now</div>
+          <div style="display:flex; flex-direction:column; align-items:center; flex:1; padding-top:4px;">
+            <div class="tl-dot"></div>
+            <div class="tl-line"></div>
+          </div>
+        </div>
+        <div class="tl-content">
+          <h4>Conceptual Blueprint Complete</h4>
+          <p>Full product design, tech architecture, revenue model, and funding strategy documented. This website is the deliverable.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Phase 1</div>
+          <div style="display:flex; flex-direction:column; align-items:center; flex:1; padding-top:4px;">
+            <div class="tl-dot" style="background:var(--mist); border:2px solid var(--smoke);"></div>
+            <div class="tl-line"></div>
+          </div>
+        </div>
+        <div class="tl-content">
+          <h4>MVP Development ($5–10K)</h4>
+          <p>Build core platform — user registration, skill quiz, basic gig listings, in-app chat, and EasyPaisa integration. Test with 50 beta users in Islamabad and Gujrat.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Phase 2</div>
+          <div style="display:flex; flex-direction:column; align-items:center; flex:1; padding-top:4px;">
+            <div class="tl-dot" style="background:var(--mist); border:2px solid var(--smoke);"></div>
+            <div class="tl-line"></div>
+          </div>
+        </div>
+        <div class="tl-content">
+          <h4>Angel Funding + Full Launch ($50K)</h4>
+          <p>Mentor matching engine, AI Profile Assistant, escrow system, and mobile app. Nationwide launch with i2i Ventures angel backing.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Year 2</div>
+          <div style="display:flex; flex-direction:column; align-items:center; flex:1; padding-top:4px;">
+            <div class="tl-dot" style="background:var(--mist); border:2px solid var(--smoke);"></div>
+            <div class="tl-line"></div>
+          </div>
+        </div>
+        <div class="tl-content">
+          <h4>Scale + VC Round ($500K+)</h4>
+          <p>Corporate accounts, skill certification system, Payoneer international integration, and Series A from Indus Valley Capital or Fatima Ventures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section style="background:var(--navy); border-radius:16px; padding:40px 48px; color:#fff;">
+    <p style="font-family:'Syne',sans-serif; font-size:.65rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--red); margin-bottom:12px;">Academic Context</p>
+    <h2 style="font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; margin-bottom:16px;">Entrepreneurship Minor — NUST</h2>
+    <p style="color:rgba(255,255,255,.6); font-size:.9rem; line-height:1.8; max-width:640px;">LaunchPad was developed as a conceptual venture blueprint for the Entrepreneurship Minor at NUST School of Health Sciences. Every element — market analysis, technical architecture, revenue model, social impact mapping, and funding strategy — was researched and designed to be credible and buildable, not just theoretical.</p>
+    <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="blueprint.html" class="btn-primary">View Full Blueprint →</a>
+      <a href="marketplace.html" class="btn-ghost">Business Model</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Launch<span>Pad</span></div>
+    <div>Entrepreneurship Minor &nbsp;·&nbsp; NUST School of Health Sciences &nbsp;·&nbsp; Conceptual Venture Blueprint</div>
+    <div style="display:flex; gap:16px;">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="blueprint.html">Blueprint</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
